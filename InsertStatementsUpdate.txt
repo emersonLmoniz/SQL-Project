@@ -1,0 +1,97 @@
+use restaurant;
+
+INSERT INTO employee_t VALUES(0001,'Roland Wong','Manager',19890522,20180214,'241-535-1222');
+INSERT INTO employee_t VALUES(0002,'Kayla Rogers','Bartender',19890511,20180209,'233-551-3333');
+INSERT INTO employee_t VALUES(0003,'Hazel Todd','Busboy',19981005,20170506,'744-941-9321');
+INSERT INTO employee_t VALUES(0004,'Gregory Gonzalez','Busboy',19951125,20171113,'921-532-5212');
+INSERT INTO employee_t VALUES(0005,'Tracy Reese','Waiter',19980622,20150630,'591-232-5991');
+INSERT INTO employee_t VALUES(0006,'Andres Lee','Busboy',19801212,20140426,'129-491-9999');
+INSERT INTO employee_t VALUES(0007,'Heather Lucas','Manager',19800215,20171201,'889-667-2201');
+INSERT INTO employee_t VALUES(0008,'Nick Brewer','Busboy',19930525,20160319,'711-221-4797');
+INSERT INTO employee_t VALUES(0009,'Kellie Cruz','Waiter',19890201,20150818,'391-933-6776');
+INSERT INTO employee_t VALUES(0010,'Brian Reed','Waiter',19870813,20180526,'797-416-6433');
+INSERT INTO employee_t VALUES(0011,'Randy Mitchell','Busboy',19830927,20161130,'797-416-6433');
+INSERT INTO employee_t VALUES(0012,'Aaron Coleman','Busboy',19980624,20180716,'562-885-9854');
+INSERT INTO employee_t VALUES(0013,'Laura Jackson','Waiter',19910408,20160908,'733-277-1234');
+INSERT INTO employee_t VALUES(0014,'Jerry Clark','Busboy',19890911,20171030,'324-779-9998');
+INSERT INTO employee_t VALUES(0015,'Israel Munoz','Waiter',19810526,20150725,'985-546-8252');
+INSERT INTO employee_t VALUES(0016,'Bob	Porter','Waiter',19870826,20170208,'639-380-6617');
+INSERT INTO employee_t VALUES(0017,'Angelo Norton','Waiter',19870826,20180508,'986-683-7614');
+
+INSERT INTO customer_t VALUES(1,'David Wong',4,20171113);
+INSERT INTO customer_t VALUES(7,'Kasper Partidge',2,20171116);
+INSERT INTO customer_t VALUES(3,'Federico Hilton',2,20171119);
+INSERT INTO customer_t VALUES(2,'Bryson Mair',7,20171122);
+INSERT INTO customer_t VALUES(9,'Flynn Thompson',5,20171212);
+INSERT INTO customer_t VALUES(6,'Keyaan Wilkerson',1,20171217);
+INSERT INTO customer_t VALUES(4,'Asiya Adamson',3,20171228);
+
+INSERT INTO chef_t VALUES(101,'Indie Marriott','Grilled');
+INSERT INTO chef_t VALUES(102,'Eduard Villanueva','Grilled');
+INSERT INTO chef_t VALUES(103,'Amalia Smith','Noodles');
+INSERT INTO chef_t VALUES(104,'Torin Whitaker','Noodles');
+
+INSERT INTO menu_t VALUES ( 0001, 101, 5, 11.49,'Grilled Beef');
+INSERT INTO menu_t VALUES ( 0002, 101, 5, 11.49,'Grilled Chicken');
+INSERT INTO menu_t VALUES ( 0003, 102, 5, 16.49,'Grilled Pork');
+INSERT INTO menu_t VALUES ( 0004, 102, 5, 13.49,'Grilled Salmon');
+INSERT INTO menu_t VALUES ( 0005, 103, 5, 5.99,'Takoyaki');
+INSERT INTO menu_t VALUES ( 0006, 104, 5, 5.99,'Wings');
+INSERT INTO menu_t VALUES ( 0007, 104, 5, 10.49,'Chow Mein');
+INSERT INTO menu_t VALUES ( 0008, 103, 5, 11.49,'Smoked Salmon');
+INSERT INTO menu_t VALUES ( 0009, 103, 5, 10.99,'Miso Ramen');
+INSERT INTO menu_t VALUES ( 0010, 101, 5, 2,'Beer');
+INSERT INTO menu_t VALUES ( 0011, 101, 5, 2,'Soda');
+
+INSERT INTO order_t VALUES(20010,0005,1,101,2,3);
+INSERT INTO order_t VALUES(20010,0005,1,102,1,1);
+INSERT INTO order_t VALUES(20011,0009,7,101,5,6);
+INSERT INTO order_t VALUES(20012,0013,3,104,4,3);
+INSERT INTO order_t VALUES(20013,0002,2,101,2,3);
+INSERT INTO order_t VALUES(20014,0003,9,104,1,2);
+INSERT INTO order_t VALUES(20015,0004,6,104,3,5);
+INSERT INTO order_t VALUES(20016,0002,4,101,4,5);
+
+INSERT INTO RESOURCE_T VALUES (0001,0001,41);
+INSERT INTO RESOURCE_T VALUES (0002,0003,60);
+INSERT INTO RESOURCE_T VALUES (0003,0002,30);
+INSERT INTO RESOURCE_T VALUES (0004,0004,50);
+INSERT INTO RESOURCE_T VALUES (0005,0005,23);
+INSERT INTO RESOURCE_T VALUES (0006,0002,30);
+INSERT INTO RESOURCE_T VALUES (0007,0003,14);
+INSERT INTO RESOURCE_T VALUES (0008,0006,22);
+INSERT INTO RESOURCE_T VALUES (0009,0006,21);
+INSERT INTO RESOURCE_T VALUES (0010,0007,140);
+INSERT INTO RESOURCE_T VALUES (0011,0008,100);
+
+INSERT INTO supplier_t VALUES ( 'Asia Seafood', 001 ,'Fish' , '4041 Hinkle Deegan Lake Road,Quincy,MA,02169');
+INSERT INTO supplier_t VALUES ( 'Antonio Butchers', 002 ,'Meat', '4000 Hinkle Deegan Lake Road,Quincy,MA,02169');
+INSERT INTO supplier_t VALUES ( 'CJ Market', 003 , 'Noodles','62  LARRY ST., QUINCY,MA,02169');
+INSERT INTO supplier_t VALUES ( 'A&E', 004,'Beer/drinks', '123 JACKSON ST., QUINCY,MA,02169');
+
+INSERT INTO inventory_t VALUES (0001,002 ,'beef','Antonio Butchers','F');
+INSERT INTO inventory_t VALUES (0002,002 ,'pork','Antonio Butchers','F');
+INSERT INTO inventory_t VALUES (0003,002 ,'chicken','Antonio Butchers','F');
+INSERT INTO inventory_t VALUES (0004,001 ,'salmon','Asia Seafood','F');
+INSERT INTO inventory_t VALUES (0005,001 ,'octopus','Asia Seafood','F');
+INSERT INTO inventory_t VALUES (0006,003 ,'noodles','CJ Market','F');
+INSERT INTO inventory_t VALUES (0007,004 ,'beer','A&E','D');
+INSERT INTO inventory_t VALUES (0008,004 ,'soda','A&E','D');
+
+INSERT INTO service_t VALUES(0001,20010,20171113,'Dine-In',0.00,'Card');
+INSERT INTO service_t VALUES(0002,20011,20171116,'Dine-In',0.00,'Cash');
+INSERT INTO service_t VALUES(0003,20012,20171119,'Dine-In',0.00,'Cash');
+INSERT INTO service_t VALUES(0004,20013,20171122,'Take-Out',0.00,'Card');
+INSERT INTO service_t VALUES(0005,20014,20171212,'Take-Out',0.00,'Card');
+INSERT INTO service_t VALUES(0006,20015,20171217,'Delivery',0.00,'Card');
+INSERT INTO service_t VALUES(0007,20016,20171228,'Delivery',0.00,'Cash');
+
+INSERT INTO dine_in_t VALUES(0001,1);
+INSERT INTO dine_in_t VALUES(0002,2);
+INSERT INTO dine_in_t VALUES(0003,3);
+
+INSERT INTO take_out_t VALUES(0004,'15:42:15');
+INSERT INTO take_out_t VALUES(0005,'17:45:20');
+
+INSERT INTO delivery_t VALUES(0006,'3785 Better Street,Quincy,MA,02169');
+INSERT INTO delivery_t VALUES(0007,'2031 Single Street,Quincy,MA,02169');

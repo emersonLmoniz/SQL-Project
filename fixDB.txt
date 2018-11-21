@@ -1,0 +1,2 @@
+many to many relationships 
+need to have foreign key from main table into the outer table
